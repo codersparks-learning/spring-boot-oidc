@@ -1,0 +1,18 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: baeldung-oidc
+            client-secret: 102cDb1FKshEGGg934o5qF9IRGc1E7dc
+            scope: openid
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/login/oauth2/code/keycloak
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:9000/realms/oidc-tutorial
+
+logging:
+  level:
+    org.springframework.web.client.RestTemplate: DEBUG
