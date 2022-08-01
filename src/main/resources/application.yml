@@ -12,7 +12,9 @@ spring:
         provider:
           keycloak:
             issuer-uri: http://localhost:9000/realms/oidc-tutorial
+            userNameAttribute: preferred_username
 
 logging:
   level:
     org.springframework.web.client.RestTemplate: DEBUG
+    uk.codersparks: DEBUG
